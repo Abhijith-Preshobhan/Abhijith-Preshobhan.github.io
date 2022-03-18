@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&family=Oswald:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+  color: #fff;
+  font: normal 16px/1.5 "Montserrat", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald";
+}
+
+#intro {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+}
+
+.intro-box {
+  background-image: linear-gradient(#1e3b70, #1e3b70);
+  height: 100%;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 760px) {
+  .intro-box {
+    text-align: center;
+  }
+}
+#intro-sntc {
+  position: relative;
+  top: 40%;
+}
+
+#tagline {
+  position: relative;
+  top: 40%;
+}
+
+#intro h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.name {
+  font-size: 3rem;
+  color: #D32F2F;
+}
+
+.fd-txt {
+  opacity: 0;
+}
+
+#tagline {
+  opacity: 0;
+}
+
+#about {
+  width: 93vw;
+  margin: auto;
+  padding: 10px 0;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+#work {
+  padding: 10px 0;
+}
+
+#work h2 {
+  text-align: center;
+}
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ab-card {
+  background-color: #fff;
+  color: #29539B;
+  border-radius: 8px;
+  padding: 10px;
+  width: 95vw;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.ab-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  transform: scale(1.02);
+}
+
+.ab-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ab-card img {
+  width: 100%;
+}
+
+.card-text p {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-cards {
+    flex-direction: row;
+  }
+
+  #cp-img {
+    height: 318px;
+  }
+}
+#contact {
+  background-color: #FFF;
+  color: #1e3b70;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#contact p {
+  margin-bottom: 0;
+}
+
+.contact-div {
+  padding: 10px;
+}
