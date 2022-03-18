@@ -17,6 +17,22 @@ faders.forEach((fader)=>{
   })
 })
 
+var poppers = gsap.utils.toArray(".sc-pop");
+
+poppers.forEach((popper)=>{
+  gsap.from(popper, {
+    scale: 0.9,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: popper,
+      start: "top 90%",
+      end: "top 50%",
+      toggleActions: "play pause resume none",
+      scrub: true
+    }
+  })
+})
+
 const tl = gsap.timeline()
 
 tl.to(words, {
@@ -38,10 +54,6 @@ if (isMobile) {
   img.src = "../img/web-bg.png";
   img.onload = function(){
     box.style.backgroundImage = "url('" + img.src + "')";
-    tl.to(".intro-box", {
-      backgroundImage: 'linear-gradient(to top, rgba(30,59,112,1), rgba(30,59,112,0))',
-      duration:2
-    });
     tl.to("#intro-sntc", {
       top: "70%",
       duration: 0.5
@@ -50,6 +62,10 @@ if (isMobile) {
       top: "70%",
       duration: 0.5
     }, "<");
+    tl.to(".intro-box", {
+      backgroundImage: 'linear-gradient(to top, rgba(30,59,112,1), rgba(30,59,112,0))',
+      duration:2
+    });
   }
 } else {
     var img = new Image();
