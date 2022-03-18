@@ -56,16 +56,16 @@ if (isMobile) {
     box.style.backgroundImage = "url('" + img.src + "')";
     tl.to("#intro-sntc", {
       top: "70%",
-      duration: 0.5
+      duration: 1
     });
     tl.to("#tagline", {
       top: "70%",
-      duration: 0.5
+      duration: 1
     }, "<");
     tl.to(".intro-box", {
       backgroundImage: 'linear-gradient(to top, rgba(30,59,112,1), rgba(30,59,112,0))',
-      duration:2
-    });
+      duration:1
+    }, "<");
   }
 } else {
     var img = new Image();
